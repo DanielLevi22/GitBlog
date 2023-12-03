@@ -18,8 +18,9 @@ body {
 }
 body , input , textarea , button{
   font-family: 'Nunito', sans-serif;
-  font-weight:400;
+  font-weight: 400;
   font-size: 1rem;
+
 }
 
 button {

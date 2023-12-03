@@ -29,6 +29,11 @@ export const CardTop = styled.div`
    color: ${ props => props.theme["base-title"]};
 
   }
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 16px;
+    }
+  }
 
   span {
     margin-top: 5px;

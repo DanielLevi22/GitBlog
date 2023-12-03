@@ -29,6 +29,13 @@ export const ProfileImg = styled.div`
     width: 148px;
     object-fit: cover;
   }
+  @media screen and (max-width: 640px) {
+    img {
+     height: 100px;
+     width: 100px;
+    }
+  
+  }
 `
 
 export const ProfileContent = styled.div`
@@ -75,7 +82,6 @@ export const ProfileSocialMedias = styled.div`
 
    @media screen and (max-width: 640px) {
    justify-content: space-between;
-   
 }
 `
 
@@ -87,7 +93,6 @@ export const ContainerIcons = styled.div`
   img {
     height: 18px;
     width: 18px;
-
   }
 
 `

@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
 
+export const ContainerHome = styled.div`
+  max-width: 100%;
+`
+
 export const  HomeMain = styled.main`
   max-width: 864px;
   margin: auto;
   padding-bottom: 80px;
 
   @media screen and (max-width: 640px) {
-    text-align: center;
+  
     padding: 30px;
   }
 `
@@ -21,6 +25,7 @@ export const DescribePulicacoes = styled.div`
     color: ${ props => props.theme["base-subtitle"]};
     font-weight: bold;
     font-size: 20px;
+  
   }
   
   span {

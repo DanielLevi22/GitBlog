@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import CardPost, { PostData } from "../../components/CardPost";
 import { Profile } from "../../components/Profile";
 import { api } from "../../libs/api";
-import { ContainerInput, DescribePulicacoes, HomeMain, Input, ConntainerSessionPost } from "./styles";
+import { ContainerInput, DescribePulicacoes, HomeMain, Input, ConntainerSessionPost, ContainerHome } from "./styles";
 import  { useEffect, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -56,7 +56,7 @@ useEffect(()=> {
 
 
   return(
-    <div>
+    <ContainerHome>
         <HomeMain>
           <Profile />
 
@@ -88,6 +88,6 @@ useEffect(()=> {
 
           </ConntainerSessionPost>
         </HomeMain>
-    </div>
+    </ContainerHome>
   )
 }

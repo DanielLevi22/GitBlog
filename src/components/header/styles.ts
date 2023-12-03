@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerHeader = styled.header`
   background-color: ${ props => props.theme["base-profile"]};
 
-  width: 100%;
+ 
   height: 280px;
   display: flex;
   justify-content: space-between;
@@ -12,9 +12,19 @@ export const ContainerHeader = styled.header`
 
   @media screen and (max-width: 640px) {
    img {
-      height: 150px;
-      width: 150px;
+      height: 6.3rem;
+      width:  6.3rem;
    }
+   
+   :first-child {
+      height: 50px;
+      width:  50px;
+   }
+   :last-child {
+      height: 50px;
+      width:  50px;
+   }
+   
   
   }
 `
