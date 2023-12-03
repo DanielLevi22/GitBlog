@@ -60,10 +60,6 @@ async function fetchUserData() {
             cameronwll
           </ContainerIcons>
           <ContainerIcons>
-          <img src="Icon.svg" alt="" />
-            Rocketseat
-          </ContainerIcons>
-          <ContainerIcons>
           <img src="groups.svg" alt="" />
            {userData?.followers}
           </ContainerIcons>

@@ -45,10 +45,7 @@ export function Post() {
           <PostTitles>
             <h1>{userData?.title}</h1>
             <ContainerIconsPost>
-              <IconPost>
-                <img src="/github.svg" alt="" />
-                <span>cameronwll</span>
-              </IconPost>
+             
               <IconPost>
                 <img src="/studio.svg" alt="" />
                 <span>{compareDate(userData?.created_at ?? '')}</span>
