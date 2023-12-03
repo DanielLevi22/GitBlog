@@ -72,6 +72,11 @@ export const ProfileSocialMedias = styled.div`
   gap: 24px;
   margin-top: 24px;
   color: ${ props => props.theme["base-subtitle"]};
+
+   @media screen and (max-width: 640px) {
+   justify-content: space-between;
+   
+}
 `
 
 export const ContainerIcons = styled.div`
