@@ -1,31 +1,61 @@
 import { ButtonLink } from "../../components/ButtonLink";
+import { api } from "../../libs/api";
 import { ContainerIconsPost, IconPost, PostInfo, PostMain, PostTitles, PostTop, ProgramingLine, SessionPost, SessionPostContent, SessionPostProgramin } from "./style";
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { useEffect ,useState} from 'react'
+import { compareDate } from "../../libs/compareDate";
+
+
+interface Item {
+  title: string
+  body: string
+  created_at: string
+  html_url: string
+  comments: number
+}
+
 export function Post() {
+  const [userData, setUserData] = useState<Item | null>(null)
+  const { id } = useParams();
+  console.log(id)
+
+
+  async function fetchPost() {
+    const response = await api.get(`/repos/DanielLevi22/GitBlog/issues/${id}`)
+    const data:Item = response.data
+    setUserData(data)
+  }
+
+  useEffect(() => {
+    fetchPost()
+  },[])
+
   return(
     <div>
       <PostMain>
         <PostInfo>
           <PostTop>
-            <Link to="/">
+            <Link to='/' >
              <ButtonLink variant="tertiary"/>
             </Link>
-            <ButtonLink variant="secondary" />
+            <Link to={userData?.html_url ?? ''}target="_blank">
+              <ButtonLink variant="secondary" />
+            </Link>
           </PostTop>
           <PostTitles>
-            <h1>JavaScript data types and data structures</h1>
+            <h1>{userData?.title}</h1>
             <ContainerIconsPost>
               <IconPost>
                 <img src="/github.svg" alt="" />
-                <span>cameronwll  </span>
+                <span>cameronwll</span>
               </IconPost>
               <IconPost>
                 <img src="/studio.svg" alt="" />
-                <span>Há 1 dia</span>
+                <span>{compareDate(userData?.created_at ?? '')}</span>
               </IconPost>
               <IconPost>
                 <img src="/chat.svg" alt="" />
-                <span>5 comentários</span>
+                <span>{userData?.comments} comentários</span>
               </IconPost>
             </ContainerIconsPost>
           </PostTitles>   
@@ -34,9 +64,7 @@ export function Post() {
         <SessionPost>
           <SessionPostContent>
             <p>
-            Programming languages all have built-in data structures, but these often differ from one language to another.
-             This article attempts to list the built-in data structures available in JavaScript and what properties they have. 
-             These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
+              {userData?.body}
             </p>
             <span>Dynamic typing</span>
             <p>

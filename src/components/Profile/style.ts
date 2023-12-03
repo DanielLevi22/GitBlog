@@ -9,8 +9,14 @@ export const ContainerProfile = styled.div`
   display: flex;
   gap: 32px;
   border-radius: 8px;
-
   background-color: ${ props => props.theme["base-profile"] };
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+   
+}
+
 
 `
 
@@ -23,10 +29,10 @@ export const ProfileImg = styled.div`
     width: 148px;
     object-fit: cover;
   }
-  
 `
 
 export const ProfileContent = styled.div`
+  width: 100%;
   max-width: 610px;
   display: flex ;
   flex-direction: column;
@@ -42,10 +48,23 @@ export const ProfileName = styled.div`
   a {
    text-decoration: none;
   }
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+    a {
+    display: none;
+  }
+}
 `
 
 export const ProfileDescription = styled.div`
   margin-top: 8px;
+  @media screen and (max-width: 640px) {
+    text-align: center;
+  
+  }
+  
 `
 
 export const ProfileSocialMedias = styled.div`
@@ -65,4 +84,5 @@ export const ContainerIcons = styled.div`
     width: 18px;
 
   }
+
 `

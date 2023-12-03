@@ -5,6 +5,11 @@ export const  HomeMain = styled.main`
   max-width: 864px;
   margin: auto;
   padding-bottom: 80px;
+
+  @media screen and (max-width: 640px) {
+    text-align: center;
+    padding: 30px;
+  }
 `
 
 export const DescribePulicacoes = styled.div`
@@ -55,4 +60,10 @@ export const ConntainerSessionPost = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+
+  @media screen and (max-width: 640px) {
+
+     grid-template-columns: 1fr;
+  
+  }
 `

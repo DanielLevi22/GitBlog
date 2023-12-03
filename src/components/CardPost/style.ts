@@ -5,8 +5,16 @@ export const ContainerCardPost = styled.div`
   box-shadow: 0 1px 2px ${ props => props.theme["base-border"]};  
   max-width: 416px;
   border-radius: 10px;
-  padding: 32px;
+  
   background-color:${ props => props.theme["base-post"]} ;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    padding: 32px;
+    display: block;
+  }
 `
 
 export const CardTop = styled.div`
