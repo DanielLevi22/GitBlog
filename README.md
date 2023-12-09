@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/public/Captura de tela 2023-12-09 150456.png "alt="Logo do GitBlog" width="200" />
+  <img src="/public/Captura de tela 2023-12-09 150456.png "alt="Logo do GitBlog" width="100%" />
   
 </p>
 
